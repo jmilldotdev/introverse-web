@@ -1,16 +1,9 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
-import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
-import { Testimonial } from '@/components/Testimonial'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import enhancer from '@/images/types/1.png'
 import conjurer from '@/images/types/2.png'
@@ -26,11 +19,11 @@ import five from '@/images/cards/5.png'
 import six from '@/images/cards/6.png'
 import product from '@/images/product.png'
 const types = [
-  ['Enhancer', enhancer],
-  ['Conjurer', conjurer],
   ['Intuitor', intuitor],
-  ['Specialist', specialist],
   ['Connector', connector],
+  ['Conjurer', conjurer],
+  ['Enhancer', enhancer],
+  ['Specialist', specialist],
   ['Transmuter', transmuter],
 ]
 const cards = [
@@ -46,16 +39,17 @@ function Clients() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-5xl font-semibold tracking-wider text-white sm:text-left">
-            Six Archetypes
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
+        <SectionIntro title="Archetypes of the Introverse" invert={true}>
+          <p>
+            Meet the 6 archetypes of the Introverse: The Intuitor, The
+            Connector, The Specialist, The Enhancer, The Conjurer, and The
+            Transmuter. Which one are you?
+          </p>
+        </SectionIntro>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
           >
             {types.map(([client, logo]) => (
               <li key={client.toString()}>
@@ -85,22 +79,18 @@ function CaseStudies({
 }) {
   return (
     <>
-      <SectionIntro
-        title="120 Playing Cards"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
+      <SectionIntro title="120 Game Cards" className="mt-24 sm:mt-32 lg:mt-40">
         <p>
-          Each of the six archetypes features a distinct set of 20 cards, each
-          corresponding to a unique game. These 20 cards are divided into three
-          levels: 8 cards in the first level, 7 in the second, and 5 in the
-          third
+          Each of the six archetypes has 20 unique game cards, ranging from
+          introspective questions to group activities to meditations and
+          rituals. Introverse has something for everyone.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
           >
             {cards.map(([client, logo]) => (
               <li key={client.toString()}>
@@ -109,8 +99,8 @@ function CaseStudies({
                     src={(logo as any).src || logo}
                     alt="type"
                     unoptimized
-                    width={500}
-                    height={300}
+                    width={400}
+                    height={200}
                     style={{ borderRadius: '1rem', border: '1px solid #fff' }}
                   />{' '}
                 </FadeIn>
@@ -123,60 +113,9 @@ function CaseStudies({
   )
 }
 
-function Services() {
-  return (
-    <>
-      <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <div className="lg:flex lg:items-center lg:justify-end">
-          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
-            </FadeIn>
-          </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
-            </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
-            </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
-            </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
-            </ListItem>
-          </List>
-        </div>
-      </Container>
-    </>
-  )
-}
-
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Introverse is a connection card game that helps you get to know each other in an unforgettable way.',
 }
 
 export default async function Home() {
@@ -192,10 +131,13 @@ export default async function Home() {
             </div>
             <div className="w-full md:w-5/12">
               <h1 className="inline-block bg-gradient-to-r from-red-300 via-green-500 to-indigo-400 bg-clip-text font-display text-5xl font-medium tracking-tight text-neutral-950 text-transparent [text-wrap:balance] sm:text-7xl">
-                Emotional Intelligence Board Game
+                Welcome to The Introverse
               </h1>
               <p className="mt-6 text-xl text-neutral-600">
-                Remember each other in an unforgettable way.
+                Get to know each other unforgettably with Introverse! Find your
+                archetype and play through three levels of questions,
+                discussions, meditations, rituals, and competitions. This is the
+                last connection card game you'll ever need.
               </p>
             </div>
           </div>

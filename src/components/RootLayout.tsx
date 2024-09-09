@@ -140,10 +140,10 @@ function NavigationItem({
 function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
-      <NavigationRow>
+      {/* <NavigationRow>
         <NavigationItem href="/work">Rules</NavigationItem>
         <NavigationItem href="/about">About Us</NavigationItem>
-      </NavigationRow>
+      </NavigationRow> */}
       {/* <NavigationRow>
         <NavigationItem href="/process">Our Process</NavigationItem>
         <NavigationItem href="/blog">Blog</NavigationItem>

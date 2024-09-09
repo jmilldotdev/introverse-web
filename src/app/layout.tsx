@@ -6,8 +6,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - EIBG',
-    default: 'EIBG - Remember each other in an unforgettable way.',
+    template: '%s - The Introverse',
+    default: 'Welcome to The Introverse',
   },
 }
 
