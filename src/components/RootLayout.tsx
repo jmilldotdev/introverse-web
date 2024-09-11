@@ -79,9 +79,10 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="https://bcad.substack.com/" invert={invert}>
-            ✨Subscribe to get notified!
+          <Button href="https://theintroversegame.myshopify.com/">
+            ✨Buy Now✨
           </Button>
+          <Link href="https://bcad.substack.com/">Subscribe</Link>
           <button
             ref={toggleRef}
             type="button"
@@ -193,8 +194,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             expanded={expanded}
             onToggle={() => {
               setExpanded((expanded) => !expanded)
-              window.setTimeout(
-                () => closeRef.current?.focus({ preventScroll: true }),
+              window.setTimeout(() =>
+                closeRef.current?.focus({ preventScroll: true }),
               )
             }}
           />
@@ -219,8 +220,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                 expanded={expanded}
                 onToggle={() => {
                   setExpanded((expanded) => !expanded)
-                  window.setTimeout(
-                    () => openRef.current?.focus({ preventScroll: true }),
+                  window.setTimeout(() =>
+                    openRef.current?.focus({ preventScroll: true }),
                   )
                 }}
               />

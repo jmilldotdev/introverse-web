@@ -92,7 +92,7 @@ export const socialMediaProfiles = [
   // { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
   {
     title: 'Instagram',
-    href: 'https://www.instagram.com/eibg_one',
+    href: 'https://www.instagram.com/introverse_one',
     icon: InstagramIcon,
   },
   // { title: 'Twitter', href: 'https://twitter.com', icon: TwitterIcon },

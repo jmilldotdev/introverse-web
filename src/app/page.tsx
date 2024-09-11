@@ -18,6 +18,8 @@ import four from '@/images/cards/4.png'
 import five from '@/images/cards/5.png'
 import six from '@/images/cards/6.png'
 import product from '@/images/product.png'
+import { Button } from '@/components/Button'
+import Link from 'next/link'
 const types = [
   ['Intuitor', intuitor],
   ['Connector', connector],
@@ -139,6 +141,15 @@ export default async function Home() {
                 discussions, meditations, rituals, and competitions. This is the
                 last connection card game you'll ever need.
               </p>
+              <Button
+                href="https://theintroversegame.myshopify.com/"
+                className="mt-8 px-6 py-3 text-lg"
+              >
+                ✨Buy Now✨
+              </Button>
+              <Link href="/how-to-play" className="mt-8 px-6 py-3 text-lg">
+                How to Play
+              </Link>
             </div>
           </div>
         </FadeIn>
