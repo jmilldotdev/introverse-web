@@ -150,6 +150,12 @@ export default async function Home() {
               <Link href="/how-to-play" className="mt-8 px-6 py-3 text-lg">
                 How to Play
               </Link>
+              <Link
+                href="https://bcad.substack.com/p/introverse-is-finally-here"
+                className="mt-8 px-6 py-3 text-lg"
+              >
+                Our Journey
+              </Link>
             </div>
           </div>
         </FadeIn>
