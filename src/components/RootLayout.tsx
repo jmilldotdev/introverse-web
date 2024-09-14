@@ -80,7 +80,7 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="https://theintroversegame.myshopify.com/">
-            ✨Buy Now✨
+            Buy Now
           </Button>
           <Link href="https://bcad.substack.com/">Subscribe</Link>
           <button

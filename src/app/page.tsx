@@ -141,21 +141,27 @@ export default async function Home() {
                 discussions, meditations, rituals, and competitions. This is the
                 last connection card game you'll ever need.
               </p>
-              <Button
-                href="https://theintroversegame.myshopify.com/"
-                className="mt-8 px-6 py-3 text-lg"
-              >
-                ✨Buy Now✨
-              </Button>
-              <Link href="/how-to-play" className="mt-8 px-6 py-3 text-lg">
-                How to Play
-              </Link>
-              <Link
-                href="https://bcad.substack.com/p/introverse-is-finally-here"
-                className="mt-8 px-6 py-3 text-lg"
-              >
-                Our Journey
-              </Link>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center">
+                <div className="w-full sm:w-auto sm:mx-auto">
+                  <Button
+                    href="https://theintroversegame.myshopify.com/"
+                    className="mt-8 px-6 py-3 text-lg w-full sm:w-auto flex justify-center items-center"
+                  >
+                    ✨Buy Now✨
+                  </Button>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:space-x-4 w-full sm:w-auto">
+                  <Link href="/how-to-play" className="mt-8 px-6 py-3 text-lg text-center w-full sm:w-auto">
+                    How to Play
+                  </Link>
+                  <Link
+                    href="https://bcad.substack.com/p/introverse-is-finally-here"
+                    className="mt-8 px-6 py-3 text-lg text-center w-full sm:w-auto"
+                  >
+                    Our Journey
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </FadeIn>
