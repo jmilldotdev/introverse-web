@@ -142,21 +142,24 @@ export default async function Home() {
                 last connection card game you'll ever need.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center">
-                <div className="w-full sm:w-auto sm:mx-auto">
+                <div className="w-full sm:mx-auto sm:w-auto">
                   <Button
-                    href="https://theintroversegame.myshopify.com/"
-                    className="mt-8 px-6 py-3 text-lg w-full sm:w-auto flex justify-center items-center"
+                    href="https://bcad.gumroad.com/l/introverse?layout=profile"
+                    className="mt-8 flex w-full items-center justify-center px-6 py-3 text-lg sm:w-auto"
                   >
                     ✨Buy Now✨
                   </Button>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:space-x-4 w-full sm:w-auto">
-                  <Link href="/how-to-play" className="mt-8 px-6 py-3 text-lg text-center w-full sm:w-auto">
+                <div className="flex w-full flex-col sm:w-auto sm:flex-row sm:space-x-4">
+                  <Link
+                    href="/how-to-play"
+                    className="mt-8 w-full px-6 py-3 text-center text-lg sm:w-auto"
+                  >
                     How to Play
                   </Link>
                   <Link
                     href="https://bcad.substack.com/p/introverse-is-finally-here"
-                    className="mt-8 px-6 py-3 text-lg text-center w-full sm:w-auto"
+                    className="mt-8 w-full px-6 py-3 text-center text-lg sm:w-auto"
                   >
                     Our Journey
                   </Link>

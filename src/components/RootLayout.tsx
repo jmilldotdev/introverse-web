@@ -79,7 +79,7 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="https://theintroversegame.myshopify.com/">
+          <Button href="https://bcad.gumroad.com/l/introverse?layout=profile">
             Buy Now
           </Button>
           <Link href="https://bcad.substack.com/">Subscribe</Link>
